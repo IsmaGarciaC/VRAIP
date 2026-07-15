@@ -1,0 +1,15 @@
+# Environment
+.env
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+data/vraip.db
+
+# Downloaded PDFs
+data/bulletins/
+
+# Virtual environment
+venv/
+.venv/
