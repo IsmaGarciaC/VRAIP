@@ -1,0 +1,28 @@
+/* --- ESTILOS CSS AVANZADOS VRAIP --- */
+.stApp { background-color: #f8fafc; }
+
+/* Tipografía y Encabezados */
+.main-header { font-size: 2.4rem; font-weight: 800; color: #0f172a; margin-bottom: 0px; letter-spacing: -0.5px;}
+.sub-header { font-size: 1.1rem; color: #64748b; margin-top: -5px; margin-bottom: 25px; font-weight: 400;}
+
+/* Tarjetas de Información de IA */
+.card-ia { background-color: #ffffff; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); border: 1px solid #e2e8f0; border-top: 4px solid #3b82f6;}
+.card-ia.warning { border-top: 4px solid #f59e0b; }
+.card-title { margin-top: 0; color: #0f172a; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;}
+.card-text { color: #334155; margin-bottom: 0; font-size: 1.05rem; line-height: 1.6;}
+
+/* Tarjetas de Métricas Superiores (KPIs) */
+.kpi-container { display: flex; justify-content: space-between; gap: 15px; margin-bottom: 25px; }
+.kpi-card { flex: 1; background-color: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; text-align: center; }
+.kpi-title { font-size: 0.85rem; color: #64748b; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 5px; }
+.kpi-value { font-size: 1.8rem; color: #0f172a; font-weight: 800; }
+.kpi-sub { font-size: 0.8rem; color: #10b981; font-weight: 600; margin-top: 5px; }
+
+/* Etiquetas de Nivel de Alerta */
+.tag-naranja { background-color: #f97316; color: white; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 0.9rem;}
+.tag-amarilla { background-color: #facc15; color: #451a03; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 0.9rem;}
+.tag-roja { background-color: #ef4444; color: white; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 0.9rem;}
+.tag-blanca { background-color: #f1f5f9; color: #64748b; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 0.9rem;}
+
+/* Ajustes para el sidebar */
+[data-testid="stSidebar"] { background-color: #ffffff; border-right: 1px solid #e2e8f0; }

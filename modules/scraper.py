@@ -14,7 +14,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # Ruta absoluta a la carpeta data
 DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
 
-def get_latest_bulletin():
+def get_latest_bulletin(volcan_nombre):
     """
     Usa un navegador fantasma (Selenium) para sortear la seguridad JSF del IG-EPN,
     hacer clic en los menús desplegables y descargar el último informe.
@@ -77,22 +77,20 @@ def get_latest_bulletin():
                 
         # --- PASO 1: Tipo ---
         print("[*] Seleccionando 'Grupo de Informes Volcánicos'...")
-        # Busca la palabra "Tipo:" (ignorando "Tipo de informe") y toca su menú
         seleccionar_menu(
             "(//*[contains(text(), 'Tipo:') and not(contains(text(), 'informe'))]/following::div[contains(@class, 'ui-selectonemenu-trigger')])[1]", 
             "//li[contains(text(), 'Grupo de Informes Volc')]", 
             4
         )
         
-        # --- PASO 2: Volcán ---
-        print("[*] Seleccionando 'El Reventador'...")
-        # Busca la palabra "Volcán:" y toca el menú que está a su lado
+        # --- PASO 2: Volcán (¡AQUÍ ESTÁ LA MAGIA MULTIVOLCÁN!) ---
+        print(f"[*] Seleccionando '{volcan_nombre}'...")
         seleccionar_menu(
             "(//*[contains(text(), 'Volcán:')]/following::div[contains(@class, 'ui-selectonemenu-trigger')])[1]", 
-            "//li[contains(text(), 'El Reventador')]", 
+            f"//li[contains(text(), '{volcan_nombre}')]", # <-- Inyectamos la variable aquí
             4
-        )
-        
+        )        
+
         # --- PASO 3: Año Actual ---
         ano_actual = str(datetime.datetime.now().year)
         print(f"[*] Seleccionando el año actual ({ano_actual})...")
