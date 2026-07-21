@@ -13,3 +13,14 @@ data/bulletins/
 # Virtual environment
 venv/
 .venv/
+
+# Archivos de Base de Datos
+*.db
+*.sqlite3
+
+# Archivos de Registro (Logs)
+*.log
+
+# Archivos temporales del scraper
+data/*.pdf
+data/*.png
